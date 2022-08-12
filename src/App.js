@@ -4,12 +4,11 @@ import { Routes, Route } from "react-router-dom";
 import AllMeetUpPage from "./pages/AllMeetUps";
 import NewMeetUpPage from "./pages/NewMeetUp";
 import FavouritePage from "./pages/Favourite";
-import MainNav from "./pages/layout/MainNav";
+import Layout from "./pages/layout/Layout";
 
 function App() {
   return (
-    <div>
-      <MainNav />
+    <Layout>
       <Routes>
         <Route path="/" element={<AllMeetUpPage />}></Route>
         <Route path="/meet-up" element={<NewMeetUpPage />}></Route>
@@ -18,7 +17,7 @@ function App() {
           element={<FavouritePage></FavouritePage>}
         ></Route>
       </Routes>
-    </div>
+    </Layout>
   );
 }
 
